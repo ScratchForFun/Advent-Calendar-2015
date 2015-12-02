@@ -20,11 +20,16 @@ public class Frame {
         Dimension dim = new Dimension(WIDTH, HEIGHT);
         frame.getContentPane().setPreferredSize(dim);
 
+        Screen screen = new Screen();
+        frame.getContentPane().add(screen);
+
         frame.setResizable(false);
         frame.pack();
 
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+        screen.start();
     }
 
 }
