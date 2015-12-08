@@ -1,6 +1,7 @@
 package net.scratchforfun;
 
 import java.awt.*;
+import java.awt.image.BufferStrategy;
 
 /**
  * Created by Magnus on 10/15/2015.
@@ -23,7 +24,23 @@ public class Screen extends Canvas implements Runnable {
         thread.start();
     }
 
-    private void preRender() {}
+    private void preRender() {
+        BufferStrategy bs = getBufferStrategy();
+        if(bs == null) {
+            createBufferStrategy(2);
+            requestFocus();
+            return;
+        }
+
+        Graphics g = bs.getDrawGraphics();
+        g.setColor(Color.RED);
+        g.fillRect(100, 100, 100, 100);
+
+        render();
+
+        g.dispose();
+        bs.show();
+    }
     private void render() {}
     private void load() {}
     private void tick() {}
@@ -69,18 +86,5 @@ public class Screen extends Canvas implements Runnable {
             } catch (InterruptedException e) { }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
