@@ -1,4 +1,6 @@
-package net.scratchforfun;
+package net.scratchforfun.adventcalendar;
+
+import net.scratchforfun.adventcalendar.gfx.Bitmap;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -42,7 +44,9 @@ public class Screen extends Canvas implements Runnable {
         bs.show();
     }
     private void render() {}
-    private void load() {}
+    private void load() {
+        System.out.println(Bitmap.BACKGROUND);
+    }
     private void tick() {}
 
     @Override

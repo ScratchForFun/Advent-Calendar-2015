@@ -1,4 +1,4 @@
-package net.scratchforfun;
+package net.scratchforfun.adventcalendar;
 
 import javax.swing.*;
 import java.awt.*;

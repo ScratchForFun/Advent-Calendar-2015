@@ -1,4 +1,6 @@
-package net.scratchforfun;
+package net.scratchforfun.adventcalendar.start;
+
+import net.scratchforfun.adventcalendar.Frame;
 
 import javax.swing.*;
 
